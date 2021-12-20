@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick=output() id="button">Press here</button>
+    <script>
+function output (){
+    document.write("<table style='border:none'>");
+for (var a = 1; a < 13; a++) {
+  
+  for (var b = 1; b < 13; b++) {
+    document.write("<td style='width:40px'><center>" + a * b + "</center></td>");
+  }
+  document.write("</tr>");
+}
+document.write("</table></center>");
+}
+    </script>
+</body>
+</html>
