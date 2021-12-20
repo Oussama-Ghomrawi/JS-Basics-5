@@ -1,0 +1,44 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick=output() id="button">Submit</button>
+    <script>
+    var y = Math.floor(Math.random() * 100 + 1);
+      var lefttries=8;
+      var guess = 1;
+      function output (){    
+     let x = document.getElementById("input").value;
+     let previousguess;
+     if(x == y)
+     {    
+         alert("You won in "+ guess + " guess ");
+     }
+     else if(x > y && x!==previousguess)
+     {guess++;lefttries--;previousguess=x;
+alert("Nop, try a smaller number, number of tries left = "+lefttries);
+     }
+     else if(x > y && x===previousguess)
+     {
+alert("You already tried this number! try a smaller one, number of tries left = "+lefttries);
+     }
+     else if(x < y && x!==previousguess)
+     {guess++;lefttries--;previousguess=x;
+alert("Nop, try a higher number, number of tries left = "+lefttries);
+     }
+     else if(x < y && x===previousguess)
+     {
+alert("You already tried this number! try a higher one, number of tries left = "+lefttries);
+     }
+     if (guess > 8){
+alert("You lost the game, the real number was "+y);
+     }
+  }
+
+    </script>
+</body>
+</html>
